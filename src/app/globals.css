@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-900: #0a192f;
+  --navy-800: #112240;
+  --navy-700: #1d3557;
+  --slate-400: #8892b0;
+  --slate-300: #a8b2d1;
+  --slate-200: #ccd6f6;
+  --slate-100: #e6f1ff;
+  --teal-300: #64ffda;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--navy-900);
+  color: var(--slate-400);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Animace blikajícího kurzoru */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-700);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--teal-300);
+} 

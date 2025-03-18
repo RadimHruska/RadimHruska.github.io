@@ -1,0 +1,2 @@
+Toto je placeholder soubor pro složku public. 
+Zde by měly být umístěny statické soubory jako obrázky, ikony, fonty atd. 
