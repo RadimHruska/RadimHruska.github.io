@@ -5,6 +5,8 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: '/webPortfolio',
+  trailingSlash: true,
+  reactStrictMode: false,
 }
 
 module.exports = nextConfig 
