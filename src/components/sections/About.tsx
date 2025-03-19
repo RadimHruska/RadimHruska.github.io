@@ -65,7 +65,12 @@ const About = () => {
             <div className="relative w-full aspect-square rounded-md overflow-hidden">
               <div className="absolute inset-0 bg-teal-300/20 z-10 group-hover:bg-transparent transition-colors duration-300"></div>
               <div className="w-full h-full bg-navy-700 flex items-center justify-center">
-                <span className="text-teal-300 text-5xl">RH</span>
+                <Image 
+                  src="/IMG_2615.JPG" 
+                  alt="Radim Hruška" 
+                  fill 
+                  className="object-cover"
+                />
               </div>
             </div>
             <div className="absolute -inset-2 border-2 border-teal-300 rounded-md -z-10 translate-y-4 translate-x-4 group-hover:translate-y-2 group-hover:translate-x-2 transition-transform duration-300"></div>

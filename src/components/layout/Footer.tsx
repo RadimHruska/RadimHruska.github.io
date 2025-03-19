@@ -37,7 +37,7 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="mailto:email@example.com" 
+              href="mailto:hruska04@gmail.com" 
               className="text-slate-400 hover:text-teal-300 transition-colors"
               aria-label="Email"
             >

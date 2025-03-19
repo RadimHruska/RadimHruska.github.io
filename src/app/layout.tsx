@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Radim Hruška | Portfolio',
-  description: 'Osobní portfolio Radima Hrušky - vývojář, designer a kreativec',
+  description: ' portfolio Radim Hruška - Developer | IT Specialist',
 };
 
 export default function RootLayout({
