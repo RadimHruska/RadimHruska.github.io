@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           <div className="flex space-x-6">
             <a 
-              href="https://github.com/username" 
+              href="https://github.com/RadimHruska" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-teal-300 transition-colors"
@@ -26,7 +26,7 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="https://linkedin.com/in/username" 
+              href="https://linkedin.com/in/radim-hruška-8ab537249" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-teal-300 transition-colors"

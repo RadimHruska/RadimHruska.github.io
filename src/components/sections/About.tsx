@@ -21,12 +21,13 @@ const About = () => {
     'SQL',
     'GIT',
     'Management',
-    'Jednání s klientem',
-    'sítě',
+    'networks',
     'Cisco',
     'Windows Server',
     'Linux',
-    'IT Support'
+    'IT Support',
+    'Mac OS',
+    
   ];
 
   return (

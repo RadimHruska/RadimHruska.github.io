@@ -50,10 +50,10 @@ const Experience = () => {
       }
     },
     {
-      company: 'OSVČ',
+      company: 'Freelance',
       title: {
-        cs: 'Vývojář mobilních a webových aplikací',
-        en: 'Mobile and Web Developer'
+        cs: 'Vývojář mobilních a webových aplikací a technická podpora',
+        en: 'Mobile and Web Developer and tech support'
       },
       period: {
         cs: 'květen 2022 - Současnost',

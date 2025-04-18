@@ -125,7 +125,14 @@ const translations: TranslationsType = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('cs');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Check if we're in the browser environment
+    if (typeof window !== 'undefined') {
+      const browserLang = navigator.language.toLowerCase();
+      return browserLang.startsWith('cs') ? 'cs' : 'en';
+    }
+    return 'cs'; // Default fallback
+  });
 
   const t = (key: string): string => {
     if (!(key in translations)) {
