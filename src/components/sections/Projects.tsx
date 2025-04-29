@@ -27,15 +27,15 @@ const Projects = () => {
   const projects: Project[] = [
     {
       title: {
-        cs: 'E-commerce platforma',
-        en: 'E-commerce Platform'
+        cs: 'Knihovna',
+        en: 'Library'
       },
       description: {
-        cs: 'Moderní e-shop postavený na Next.js s využitím Stripe pro platby a Sanity.io jako headless CMS. Plně responzivní design, optimalizovaný pro rychlé načítání a SEO.',
-        en: 'Modern e-shop built on Next.js using Stripe for payments and Sanity.io as a headless CMS. Fully responsive design, optimized for fast loading and SEO.'
+        cs: 'KnihovnaDemo je moderní systém pro správu knihovny s WPF klientskou aplikací a .NET Core backendem, který podporuje správu uživatelů, knih a výpůjček. Projekt využívá Docker pro kontejnerizaci a Entity Framework pro práci s databází, včetně automatických migrací. Systém je připraven pro nasazení jak v kontejnerizovaném prostředí, tak v tradičním vývojovém prostředí.',
+        en: 'Modern library management system with WPF client application and .NET Core backend, supporting user management, book inventory, and borrowing. Utilizes Docker for containerization and Entity Framework for database operations, including automatic migrations. System is ready for deployment in both containerized and traditional development environments.'
       },
       image: '/projects/ecommerce.jpg',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe', 'Sanity.io'],
+      technologies:  ['WPF', '.NET Core', 'Entity Framework', 'SQL Server', 'Docker', 'Docker Compose'],
       github: 'https://github.com/username/ecommerce',
       demo: 'https://ecommerce-demo.com',
       featured: true
