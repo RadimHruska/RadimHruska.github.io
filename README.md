@@ -1,61 +1,61 @@
-# Osobní Portfolio Web
+# Personal Portfolio Website
 
-Moderní osobní portfolio vytvořené pomocí Next.js a Tailwind CSS.
+Modern personal portfolio created using Next.js and Tailwind CSS.
 
-## Funkce
+## Features
 
-- Responzivní design pro všechna zařízení
-- Animovaná hvězdná obloha na pozadí
-- Sekce: Úvod, O mně, Zkušenosti, Projekty, Kontakt
-- Optimalizováno pro výkon a SEO
-- Tmavý režim pro příjemné prohlížení
+- Responsive design for all devices
+- Animated starry background
+- Sections: Introduction, About, Experience, Projects, Contact
+- Optimized for performance and SEO
+- Dark mode for pleasant browsing
 
-## Technologie
+## Technologies
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Jazyk**: [TypeScript](https://www.typescriptlang.org/)
-- **Fonty**: [Google Fonts](https://fonts.google.com/) (Inter, Roboto Mono)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Fonts**: [Google Fonts](https://fonts.google.com/) (Inter, Roboto Mono)
 - **Deployment**: [Vercel](https://vercel.com/)
 
-## Spuštění lokálně
+## Running Locally
 
 ```bash
-# Klonování repozitáře
+# Clone repository
 git clone https://github.com/yourusername/web-portfolio.git
 cd web-portfolio
 
-# Instalace závislostí
+# Install dependencies
 npm install
 
-# Spuštění vývojového serveru
+# Start development server
 npm run dev
 ```
 
-Otevřete [http://localhost:3000](http://localhost:3000) ve vašem prohlížeči.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Struktura projektu
+## Project Structure
 
 ```
 web-portfolio/
-├── public/            # Statické soubory (obrázky, ikony)
+├── public/            # Static files (images, icons)
 ├── src/
 │   ├── app/           # App Router (Next.js 13+)
-│   ├── components/    # React komponenty
-│   │   ├── layout/    # Layout komponenty (Header, Footer)
-│   │   └── sections/  # Sekce stránky (Hero, About, atd.)
-│   └── styles/        # Globální styly
-├── tailwind.config.js # Konfigurace Tailwind CSS
-└── package.json       # Závislosti projektu
+│   ├── components/    # React components
+│   │   ├── layout/    # Layout components (Header, Footer)
+│   │   └── sections/  # Page sections (Hero, About, etc.)
+│   └── styles/        # Global styles
+├── tailwind.config.js # Tailwind CSS configuration
+└── package.json       # Project dependencies
 ```
 
-## Řešení problémů s hydratací
+## Hydration Issue Solution
 
-Projekt používá speciální řešení pro animovanou hvězdnou oblohu, která je vykreslována pomocí HTML Canvas. Aby se předešlo problémům s hydratací v Next.js, je použita kombinace:
+The project uses a special solution for the animated starry background, which is rendered using HTML Canvas. To prevent hydration issues in Next.js, a combination of:
 
-1. Komponenta `NoSSR` pro zabránění vykreslování na serveru
-2. Atribut `suppressHydrationWarning` na canvas elementu
+1. `NoSSR` component to prevent server-side rendering
+2. `suppressHydrationWarning` attribute on canvas element
 
-## Licence
+## License
 
 MIT 
