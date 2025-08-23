@@ -178,17 +178,16 @@ const StarryBackground = ({
       
       if (shootingStar.active) {
         // Vykreslení padající hvězdy
-        const endX = shootingStar.x + Math.cos(shootingStar.angle) * shootingStar.length;
-        const endY = shootingStar.y + Math.sin(shootingStar.angle) * shootingStar.length;
+        const tailStartX = shootingStar.x - Math.cos(shootingStar.angle) * shootingStar.length;
+        const tailStartY = shootingStar.y - Math.sin(shootingStar.angle) * shootingStar.length;
         
-        // Vytvoření gradientu pro ocas
-        const gradient = ctx.createLinearGradient(shootingStar.x, shootingStar.y, endX, endY);
-        gradient.addColorStop(0, `rgba(255, 255, 255, ${shootingStar.opacity})`);
-        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        const gradient = ctx.createLinearGradient(tailStartX, tailStartY, shootingStar.x, shootingStar.y);
+        gradient.addColorStop(0, 'rgba(255, 255, 255, 0)');
+        gradient.addColorStop(1, `rgba(255, 255, 255, ${shootingStar.opacity})`);
         
         ctx.beginPath();
-        ctx.moveTo(shootingStar.x, shootingStar.y);
-        ctx.lineTo(endX, endY);
+        ctx.moveTo(tailStartX, tailStartY);
+        ctx.lineTo(shootingStar.x, shootingStar.y);
         ctx.strokeStyle = gradient;
         ctx.lineWidth = 2;
         ctx.stroke();
