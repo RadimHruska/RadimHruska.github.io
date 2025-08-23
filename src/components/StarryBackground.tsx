@@ -39,14 +39,14 @@ const StarryBackground = ({
   const shootingStarsRef = useRef<ShootingStar[]>([]);
   const animationFrameRef = useRef<number>(0);
 
-  // Generuje náhodnou barvu hvězdy
+  // Generate random star color
   const getStarColor = () => {
     const colors = [
-      'rgba(255, 255, 255, 1)',  // bílá (60%)
-      'rgba(220, 237, 255, 1)',  // modrá (15%)
-      'rgba(255, 253, 220, 1)',  // žlutá (15%)
-      'rgba(255, 210, 210, 1)',  // červená (5%)
-      'rgba(220, 255, 230, 1)'   // zelená (5%)
+      'rgba(255, 255, 255, 1)',  // white (60%)
+      'rgba(220, 237, 255, 1)',  // blue (15%)
+      'rgba(255, 253, 220, 1)',  // yellow (15%)
+      'rgba(255, 210, 210, 1)',  // red (5%)
+      'rgba(220, 255, 230, 1)'   // green (5%)
     ];
     
     const rand = Math.random();
@@ -57,7 +57,7 @@ const StarryBackground = ({
     return colors[4];
   };
 
-  // Inicializace hvězd
+  // Initialize stars
   const initStars = () => {
     if (!canvasRef.current) return;
     
@@ -65,11 +65,11 @@ const StarryBackground = ({
     const width = window.innerWidth;
     const height = window.innerHeight;
     
-    // Nastavení velikosti plátna
+    // Set canvas size
     canvas.width = width;
     canvas.height = height;
     
-    // Vytvoření hvězd
+    // Create stars
     const stars: Star[] = [];
     for (let i = 0; i < starCount; i++) {
       stars.push({
@@ -86,7 +86,7 @@ const StarryBackground = ({
     
     starsRef.current = stars;
     
-    // Inicializace padajících hvězd
+    // Initialize shooting stars
     const shootingStars: ShootingStar[] = [];
     for (let i = 0; i < 5; i++) {
       shootingStars.push({
@@ -103,7 +103,7 @@ const StarryBackground = ({
     shootingStarsRef.current = shootingStars;
   };
 
-  // Animace hvězd
+  // Animate stars
   const animateStars = () => {
     if (!canvasRef.current) return;
     
@@ -114,30 +114,30 @@ const StarryBackground = ({
     const width = canvas.width;
     const height = canvas.height;
     
-    // Vyčištění plátna
+    // Clear canvas
     ctx.fillStyle = 'rgba(10, 25, 47, 1)';
     ctx.fillRect(0, 0, width, height);
     
-    // Přidání gradientu pro realistický vzhled oblohy
+    // Add gradient for realistic sky appearance
     const gradient = ctx.createLinearGradient(0, 0, 0, height);
     gradient.addColorStop(0, 'rgba(15, 30, 60, 0.4)');
     gradient.addColorStop(1, 'rgba(10, 25, 47, 0)');
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
     
-    // Vykreslení a aktualizace hvězd
+    // Draw and update stars
     starsRef.current.forEach(star => {
-      // Efekt blikání - změna jasu
+      // Twinkle effect - brightness change
       star.twinkleDirection = star.brightness <= 0.3 ? 1 : (star.brightness >= 0.9 ? -1 : star.twinkleDirection);
       star.brightness += star.twinkleDirection * star.twinkleSpeed;
       star.brightness = Math.max(0.2, Math.min(1, star.brightness));
       
-      // Vykreslení hvězdy
+      // Draw star
       ctx.beginPath();
       
-      // Větší hvězdy mají záři
+      // Larger stars have glow
       if (star.size > 1.5) {
-        // Vytvoření záře kolem hvězdy
+        // Create glow around star
         const glow = ctx.createRadialGradient(
           star.x, star.y, 0,
           star.x, star.y, star.size * 3
@@ -149,15 +149,13 @@ const StarryBackground = ({
         ctx.fillRect(star.x - star.size * 3, star.y - star.size * 3, star.size * 6, star.size * 6);
       }
       
-      // Vykreslení samotné hvězdy
+      // Draw the star itself
       ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
       ctx.fillStyle = star.color.replace('1)', `${star.brightness})`);
       ctx.fill();
       
-      // Pohyb hvězdy (jemný pohyb)
       star.y += star.speed;
       
-      // Resetování hvězdy, pokud opustí obrazovku
       if (star.y > height) {
         star.y = 0;
         star.x = Math.random() * width;
@@ -166,9 +164,9 @@ const StarryBackground = ({
       }
     });
     
-    // Vykreslení a aktualizace padajících hvězd
+
     shootingStarsRef.current.forEach(shootingStar => {
-      // Náhodná aktivace padající hvězdy
+      // Random shooting star activation
       if (!shootingStar.active && Math.random() < 0.005) {
         shootingStar.active = true;
         shootingStar.x = Math.random() * width;
@@ -177,7 +175,7 @@ const StarryBackground = ({
       }
       
       if (shootingStar.active) {
-        // Vykreslení padající hvězdy
+
         const tailStartX = shootingStar.x - Math.cos(shootingStar.angle) * shootingStar.length;
         const tailStartY = shootingStar.y - Math.sin(shootingStar.angle) * shootingStar.length;
         
@@ -192,52 +190,52 @@ const StarryBackground = ({
         ctx.lineWidth = 2;
         ctx.stroke();
         
-        // Přidání jasnější hlavy
+        // Add brighter head
         ctx.beginPath();
         ctx.arc(shootingStar.x, shootingStar.y, 2, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255, 255, 255, ${shootingStar.opacity})`;
         ctx.fill();
         
-        // Pohyb padající hvězdy
+        // Move shooting star
         shootingStar.x += Math.cos(shootingStar.angle) * shootingStar.speed;
         shootingStar.y += Math.sin(shootingStar.angle) * shootingStar.speed;
         
-        // Postupné mizení
+        // Gradual fade
         shootingStar.opacity -= 0.02;
         
-        // Deaktivace, když zmizí nebo opustí obrazovku
+        // Deactivate when faded or left screen
         if (shootingStar.opacity <= 0 || shootingStar.x > width || shootingStar.y > height) {
           shootingStar.active = false;
         }
       }
     });
     
-    // Pokračování animace
+    // Continue animation
     animationFrameRef.current = requestAnimationFrame(animateStars);
   };
 
-  // Zpracování změny velikosti okna
+  // Handle window resize
   const handleResize = () => {
     if (!canvasRef.current) return;
     
     canvasRef.current.width = window.innerWidth;
     canvasRef.current.height = window.innerHeight;
     
-    // Reinicializace hvězd
+    // Reinitialize stars
     initStars();
   };
 
   useEffect(() => {
-    // Inicializace hvězd
+    // Initialize stars
     initStars();
     
-    // Spuštění animace
+    // Start animation
     animationFrameRef.current = requestAnimationFrame(animateStars);
     
-    // Přidání posluchače události změny velikosti
+    // Add resize event listener
     window.addEventListener('resize', handleResize);
     
-    // Úklid
+    // Cleanup
     return () => {
       cancelAnimationFrame(animationFrameRef.current);
       window.removeEventListener('resize', handleResize);

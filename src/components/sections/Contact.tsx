@@ -24,7 +24,7 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Nahraďte tyto hodnoty vašimi skutečnými údaji z EmailJS
+      // Replace these values with your actual EmailJS credentials
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -34,10 +34,10 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'service_7ojhvpy', // Nahraďte vaším Service ID
-        'template_89op69t', // Nahraďte vaším Template ID
+        'service_7ojhvpy', // Replace with your Service ID
+        'template_89op69t', // Replace with your Template ID
         templateParams,
-        'ES0kC5kbhKhzOKWbe' // Nahraďte vaším Public Key
+        'ES0kC5kbhKhzOKWbe' // Replace with your Public Key
       );
 
       setSubmitStatus('success');
