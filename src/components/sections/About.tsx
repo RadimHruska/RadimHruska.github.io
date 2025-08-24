@@ -8,26 +8,46 @@ const About = () => {
   const { t } = useLanguage();
   
   const skills = [
+    // Programming Languages & Frameworks
     'C#', 
     '.NET', 
     '.NET MAUI', 
     'WPF',
     'PHP',
-    'HTML',
-    'CSS',
     'JavaScript',
+    'Swift',
+    'Flutter',
+    
+    // Web Technologies
+    'HTML5',
+    'CSS',
     'React',
     'Ionic',
-    'SQL',
-    'GIT',
-    'Management',
-    'networks',
-    'Cisco',
-    'Windows Server',
-    'Linux',
-    'IT Support',
-    'Mac OS',
     
+    // Databases & Tools
+    'SQL',
+    'Git',
+    
+    // Operating Systems & Platforms
+    'Windows',
+    'Linux',
+    'macOS',
+    
+    // Networking & Infrastructure
+    'Cisco',
+    'Networking',
+    'IT Support',
+    'Windows Server',
+    
+    // Additional Skills
+    'Mobile Development',
+    'Web Development',
+    'Desktop Development',
+    'AI & Machine Learning',
+    'Blockchain',
+    'Cryptocurrencies',
+    'Hardware Fundamentals',
+    'Project Management'
   ];
 
   return (

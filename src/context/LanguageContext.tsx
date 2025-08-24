@@ -61,12 +61,12 @@ const translations: TranslationsType = {
     en: 'Hi, my name is'
   },
   'hero.title': {
-    cs: 'Programátor | IT Specialista',
-    en: 'Developer | IT Specialist'
+    cs: 'Freelance Software Developer  Web & Mobile & Desktop Apps',
+    en: 'Freelance Software Developer  Web & Mobile & Desktop Apps'
   },
   'hero.description': {
-    cs: 'Mladý nadšený programátor zaměřený na vývoj mobilních a webových aplikací. Specializuji se na technologie .NET, C#, MAUI a React. Mám zkušenosti i se správou IT systémů a komplexním vývojem aplikací na míru.',
-    en: 'Young enthusiastic programmer focused on mobile and web application development. I specialize in .NET, C#, MAUI, and React technologies. I also have experience with IT system administration and complex custom application development.'
+    cs: 'Jsem freelance software developer a student FIT VUT s důrazem na software engineering a moderní technologie. Programování není jen moje vášeň, ale také způsob, jak financuji studia a každodenní život. Specializuji se na mobilní, desktopové a webové aplikace.',
+    en: 'I am a freelance software developer and student at FIT VUT, with a strong focus on software engineering and modern technologies. Programming is not only my passion but also the way I fund my studies and everyday life. I specialize in mobile, desktop and web applications.'
   },
   'hero.projects': {
     cs: 'Moje projekty',
@@ -83,16 +83,16 @@ const translations: TranslationsType = {
     en: 'About Me'
   },
   'about.paragraph1': {
-    cs: 'Mladý nadšený programátor co se rád učí novým věcem, ale zároveň toho má dost za sebou. Mezi jeho nejzajímavější zkušenosti patří stáž ve firmě NewLink Moravia S.R.O., vývoj systému na zpracování objednávek pro firmu Kalasová stravování S.R.O. a v neposlední řadě práce na projektu AppCelly.',
-    en: 'A young enthusiastic programmer who likes to learn new things, but at the same time has a lot of experience behind him. Among his most interesting experiences are an internship at NewLink Moravia S.R.O., development of an order processing system for Kalasová catering S.R.O. and last but not least, work on the AppCelly project.'
+    cs: 'Jsem freelance software developer a student FIT VUT s důrazem na software engineering a moderní technologie. Programování není jen moje vášeň, ale také způsob, jak financuji studia a každodenní život.',
+    en: 'I am a freelance software developer and student at FIT VUT, with a strong focus on software engineering and modern technologies. Programming is not only my passion but also the way I fund my studies and everyday life.'
   },
   'about.paragraph2': {
-    cs: 'Během své kariéry jsem získal zkušenosti s vývojem mobilních a webových aplikací, testováním software a správou IT systémů. Zaměřuji se na profesionální přístup k vývoji a nasazení aplikací do provozu.',
-    en: 'During my career, I have gained experience in mobile and web application development, software testing, and IT system administration. I focus on a professional approach to the development and deployment of applications into operation.'
+    cs: 'Moje odbornost spočívá v mobilních, desktopových a webových aplikacích, pracuji s C#, .NET, .NET MAUI, WPF, PHP, JavaScript, React, Ionic, Swift a Flutter. Vytvářím řešení, která jsou škálovatelná, efektivní a přizpůsobená potřebám klientů.',
+    en: 'My expertise lies in mobile, desktop and web applications, working with C#, .NET, .NET MAUI, WPF, PHP, JavaScript, React, Ionic, Swift and Flutter. I create solutions that are scalable, efficient, and tailored to clients\' needs.'
   },
   'about.paragraph3': {
-    cs: 'Kromě vývoje aplikací se také věnuji správě IT systémů a podpoře uživatelů. Mám zkušenosti s komplexní komunikací se zákazníkem a kompletním procesem vývoje a nasazení aplikací do provozu.',
-    en: 'In addition to application development, I also focus on IT system administration and user support. I have experience with complex customer communication and the complete process of developing and deploying applications into operation.'
+    cs: 'Hluboce se zajímám o umělou inteligenci a její praktické využití ve vývoji software, zkoumám, jak mohou nástroje poháněné AI urychlit inovace a efektivitu. Kromě software engineeringu mám zkušenosti napříč Windows, Linux a macOS, stejně jako znalosti v oblasti sítí, IT podpory, základů hardwaru a blockchain technologií včetně Bitcoinu a kryptoměn.',
+    en: 'I am deeply interested in artificial intelligence and its practical use in software development, exploring how AI-powered tools can accelerate innovation and efficiency. In addition to software engineering, I have experience across Windows, Linux, and macOS, as well as knowledge in networking, IT support, hardware fundamentals, and blockchain technologies including Bitcoin and cryptocurrencies.'
   },
   'about.skills': {
     cs: 'Technologie a nástroje, se kterými pracuji:',
